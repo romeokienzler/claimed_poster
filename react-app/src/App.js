@@ -39,28 +39,28 @@ function App() {
 
 
   return (
-    <div>
+    <div align="center">
       <nav>
         <div>
-          <button onClick={() => setActive(1)}>1</button>
-          <button onClick={() => setActive(2)}>2</button>
-          <button onClick={() => setActive(3)}>3</button>
+          <button onClick={() => setActive(1)}>Ŵelcome</button>
+          <button onClick={() => setActive(2)}>Requirements</button>
+          <button onClick={() => setActive(3)}>Annotations</button>
           <button
             onClick={() => {
               setActive(4);
               playAudio();
             }}>
-            4
+            Kubernetes
           </button>
-          <button onClick={() => setActive(5)}>5</button>
-          <button onClick={() => setActive(7)}>7</button>
-          <button onClick={() => setActive(8)}>8</button>
-          <button onClick={() => setActive(9)}>9</button>
-          <button onClick={() => setActive(10)}>10</button>
-          <button onClick={() => setActive(11)}>11</button>
-          <button onClick={() => setActive(12)}>12</button>
-          <button onClick={() => setActive(13)}>13</button>
-          <button onClick={() => setActive(14)}>14</button>
+          <button onClick={() => setActive(5)}>Kubeflow</button>
+          <button onClick={() => setActive(7)}>Elyra</button>
+          <button onClick={() => setActive(8)}>CLAIMED</button>
+          <button onClick={() => setActive(9)}>Explainabiliy</button>
+          <button onClick={() => setActive(10)}>Security</button>
+          <button onClick={() => setActive(11)}>Bias</button>
+          <button onClick={() => setActive(12)}>OpenScale</button>
+          <button onClick={() => setActive(13)}>Machine Learning Exchange</button>
+          <button onClick={() => setActive(14)}>Summary</button>
         </div>
       </nav>
       <div>
