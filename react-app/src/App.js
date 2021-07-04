@@ -12,26 +12,37 @@ import audio3 from './audio/slide3.mp3';
 import audio4 from './audio/slide4.mp3';
 
 
-
+function playAudio() {
+  console.log(document.getElementById('audio1'));
+}
 
 
 function App() {
-  const [active, setActive] = useState(1)
+  const [active, setActive] = useState(1);
+
 
   return (
     <div>
       <nav>
-        <button onClick={() => setActive(1)}>1</button>
-        <button onClick={() => setActive(2)}>2</button>
-        <button onClick={() => setActive(3)}>3</button>
-        <button onClick={() => setActive(4)}>4</button>
+        <div>
+          <button onClick={() => setActive(1)}>1</button>
+          <button onClick={() => setActive(2)}>2</button>
+          <button onClick={() => setActive(3)}>3</button>
+          <button
+            onClick={() => {
+              setActive(4);
+              playAudio();
+            }}>
+            4
+          </button>
+        </div>
       </nav>
       <div>
-        {active === 1 && <div align="center"><audio controls src={audio1} /><Slide index={slide1} /></div>}
-        {active === 2 && <div align="center"><audio controls src={audio2} /><Slide index={slide2} /></div>}
-        {active === 3 && <div align="center"><audio controls src={audio3} /><Slide index={slide3} /></div>}
-        {active === 4 && <div align="center"><audio controls src={audio4} /><Slide index={slide4} /></div>}
-      </div> 
+        {active === 1 && <div align="center"><audio id = "audio1" controls src={audio1} /><Slide index={slide1} /></div>}
+        {active === 2 && <div align="center"><audio id = "audio2" controls src={audio2} /><Slide index={slide2} /></div>}
+        {active === 3 && <div align="center"><audio id = "audio3" controls src={audio3} /><Slide index={slide3} /></div>}
+        {active === 4 && <div align="center"><audio id = "audio4" controls src={audio4} /><Slide index={slide4} /></div>}
+      </div>
     </div>
 
   );

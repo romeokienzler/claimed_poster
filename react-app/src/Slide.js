@@ -1,12 +1,11 @@
 import React from 'react'
-import useSound from 'use-sound';
 
 
-const Slide = ({index, sound}) => {
+const Slide = ({index, audio}) => {
 
     return (
         <div className="slide">
-            <img src={index}></img>
+            <img width="70%" src={index}></img>
         </div>
     );
 
